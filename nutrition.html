@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nutrition Tips - Wellness Point</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/logo.png" alt="logo" class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workout.html">Workout Routines</a></li>
+          <li><a href="nutrition.html" class="active">Nutrition Tips</a></li>
+          <li><a href="community.html">Fitness Community</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Healthy Eating Tips</h2>
+      <p>
+        Eating a balanced diet is crucial for maintaining a healthy lifestyle.
+        Here are some tips:
+      </p>
+      <ul>
+        <li>Include a variety of foods in your diet.</li>
+        <li>Stay hydrated by drinking plenty of water.</li>
+        <li>Limit processed foods and added sugars.</li>
+      </ul>
+
+      <h3>Submit Your Favorite Healthy Recipe</h3>
+      <form id="recipeForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="recipe">Recipe:</label>
+        <textarea id="recipe" name="recipe" required></textarea>
+
+        <label for="mealType">Meal Type:</label>
+        <select id="mealType" name="mealType" required>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snack">Snack</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        Contact us:
+        <a href="mailto:info@wellnesspoint.com">info@wellnesspoint.com</a>
+      </p>
+      <p>Follow us on social media!</p>
+    </footer>
+  </body>
+</html>
