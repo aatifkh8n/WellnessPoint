@@ -185,6 +185,10 @@ footer a, footer a:visited, footer a:hover, footer a:active {
         flex-wrap: wrap;
     }
 
+    img {
+        width: 100% !important;
+    }
+
     .video video {
         width: 100%;
     }
