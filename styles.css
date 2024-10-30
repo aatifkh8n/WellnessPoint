@@ -5,13 +5,6 @@ body {
     background-color: #f9f9f9;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -68,7 +61,7 @@ th {
 }
 
 .logo {
-    height: 200px;
+    height: 110px;
 }
 
 .main-image {
@@ -77,48 +70,69 @@ th {
     margin: 20px 0;
 }
 
-.video {
-    display: flex;
-    column-gap: 50px;
-    align-items: center;
-    margin: 3rem 0;
-}
-
 video {
-    width: 60%;
-    height: auto;
     margin: 20px 0;
     transition: transform 0.5s ease; /* Smooth transition */
 }
 
 video:hover {
     transform: scale(1.01); /* Scale up slightly on hover */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.video-text {
+    text-align: left;
+}
+
+.nav-link.active {
+    color: #4CAF50 !important;
+}
+
+#back-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.6rem 0.75rem;
+    display: none;
+}
+
+#back-to-top:hover {
+    background-color: #45a049;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-.gallery {
-    margin: 3rem 0;
-    display: flex;
-    width: 100%;
-    height: 480px;
-    column-gap: 10px;
+#back-to-top img {
+    height: 20px;
+    width: 20px;
+    margin-top: -0.5rem
 }
 
-.gallery .card {
-    transition: transform 0.5s ease; /* Smooth transition */
-    width: 500px;
-}
-
-.gallery .card:hover img {
-    transform: scale(1.03); /* Scale up slightly on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.gallery .card img {
-    width: 480px;
-    height: 360px;
+.carousel-item img {
+    height: 600px;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Smooth transition */
+    filter: brightness(60%);
+}
+
+.card img {
+    transition: all ease-in-out 0.5s;
+}
+
+.card, .card .img {
+    overflow: hidden;
+}
+
+.card .img {
+    display: inline-block;
+    height: 300px;
+}
+
+.card:hover img {
+    transform: scale(1.2);
 }
 
 footer {
@@ -160,7 +174,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+button[type=submit]:hover {
     background-color: #45a049;
 }
 
@@ -169,18 +183,19 @@ footer a, footer a:visited, footer a:hover, footer a:active {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 5px 0;
     }
 
     .logo {
-        height: 150px;
-        margin-bottom: -20px;
+        height: 120px;
+        margin-bottom: -15px;
+        margin-top: -10px;
     }
 
-    .gallery, .video {
+    .video {
         height: auto;
         flex-wrap: wrap;
     }
@@ -189,7 +204,7 @@ footer a, footer a:visited, footer a:hover, footer a:active {
         width: 100% !important;
     }
 
-    .video video {
-        width: 100%;
+    .video-text {
+        text-align: center;
     }
 }
